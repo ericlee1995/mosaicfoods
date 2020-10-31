@@ -1,19 +1,93 @@
 .container {
-  min-height: 100vh;
+  min-height: 125vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
+  height: 100%;
+  background-image: url('//cdn.shopify.com/s/files/1/0080/0735/2399/t/13/assets/hero-veggie-bowls-and-oat-bowls-lagoon-mobile.jpg?v=8175654449901816279');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  overflow: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    min-height: 100vh;
+    background-image: url('//cdn.shopify.com/s/files/1/0080/0735/2399/t/13/assets/hero-veggie-bowls-and-oat-bowls-lagoon-desktop.jpg?v=1297946136632451863');
+  }
+}
+
+.heading {
+  font-family: CeraPRO-Medium, sans-serif;
+  color: #fff;
+  font-size: 1.8em;
+  line-height: 1.1;
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+  .heading {
+    font-size: 3.5em;
+    text-align: left;
+  }
+}
+
+.subline {
+  font-size: 1em;
+  font-family: CeraPRO-Medium;
+}
+
+@media screen and (min-width: 992px) {
+  .subline {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .desktop-line-break {
+    display: block;
+  }
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .content-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+  }
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 350px 40px 50px;
   flex: 1;
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .main {
+    padding: 0 40px 50px;
+    text-align: left;
+  }
 }
 
 .footer {
@@ -110,8 +184,18 @@
   line-height: 1.5;
 }
 
+.navbar {
+  height: 75px;
+  width: 100%;
+  justify-content: center;
+}
+
 .logo {
-  height: 1em;
+  width: 135px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('//cdn.shopify.com/s/files/1/0080/0735/2399/t/13/assets/mosaic-logo-white.png?v=3762412598609693541');
 }
 
 @media (max-width: 600px) {

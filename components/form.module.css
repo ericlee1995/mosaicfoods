@@ -1,0 +1,63 @@
+.form {
+	display: block;
+	font-size: 0.9em;
+	text-align: left;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+	.form {
+		margin: 0;
+	}
+}
+
+.form-row {
+	margin: 0;
+}
+
+.form-group {
+	width: 100%;
+}
+
+.form-label {
+	font-family: CeraPRO-Bold, serif;
+	margin: 0;
+}
+
+.form-control {
+	font-family: CeraPRO-Medium, serif;
+	padding: 12px 15px;
+}
+
+.form-error {
+	color: #eb9887;
+}
+
+.button {
+	background-color: #c2e3d6;
+	color: #0a6661;
+	width: 100%;
+	border: none;
+	padding: 20px 15px;
+	font-family: CeraPRO-Medium, serif;
+	border-radius: 5px;
+	margin-top: 20px;
+}
+
+.tos-privacy {
+	font-size: 0.75em;
+	font-style: italic;
+}
+
+.p {
+	margin-top: 5px;
+	text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+	.p {
+		margin: 0;
+		text-align: left;
+	}
+}
