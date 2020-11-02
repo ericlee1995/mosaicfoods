@@ -1,9 +1,12 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import styles from './form.module.css';
 
 export default function ZipcodeAndEmailForm() {
+  const [zipcode, setZipcode] = useState('');
+  const [email, setEmail] = useState('');
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -14,6 +17,19 @@ export default function ZipcodeAndEmailForm() {
     }
 
     setValidated(true);
+  };
+
+  const handleChange = (e) => {
+    switch (e.target.name) {
+      case 'zipcode':
+        setZipcode(e.target.value);
+        break;
+      case 'email':
+        setEmail(e.target.value);
+        break;
+      default:
+        console.error('An error occurred while processing form data.');
+    }
   };
 
   return (
@@ -33,10 +49,16 @@ export default function ZipcodeAndEmailForm() {
           <Form.Control
             className={styles['form-control']}
             type="text"
+            name="zipcode"
+            value={zipcode}
             placeholder="Shipping zipcode"
+            onChange={handleChange}
             required
           />
-          <Form.Control.Feedback className={styles['form-error']} type="invalid">
+          <Form.Control.Feedback
+            className={styles['form-error']}
+            type="invalid"
+          >
             Please enter a valid zip code.
           </Form.Control.Feedback>
         </Form.Group>
@@ -47,25 +69,46 @@ export default function ZipcodeAndEmailForm() {
           <Form.Control
             className={styles['form-control']}
             type="text"
+            name="email"
+            value={email}
             placeholder="E-mail address"
+            onChange={handleChange}
             required
           />
-          <Form.Control.Feedback className={styles['form-error']} type="invalid">
+          <Form.Control.Feedback
+            className={styles['form-error']}
+            type="invalid"
+          >
             Please enter a valid email address.
           </Form.Control.Feedback>
         </Form.Group>
       </Form.Row>
-      <button className={styles.button} type="submit">
-        Get Started
-      </button>
+      <Link
+        href={{
+          pathname: '/subscription-flow',
+          query: { zip_code: zipcode, email, step: 2 },
+        }}
+      >
+        <button className={styles.button} type="submit">
+          Get Started
+        </button>
+      </Link>
       <div className={styles['tos-privacy']}>
         <p className={styles.p}>
           By continuing, you agree to our{' '}
-          <a href="/pages/terms-of-service" target="_blank">
+          <a
+            className={styles['tos-privacy-a']}
+            href="/terms-of-service"
+            target="_blank"
+          >
             Terms of Service
           </a>{' '}
           and{' '}
-          <a href="/pages/privacy-policy" target="_blank">
+          <a
+            className={styles['tos-privacy-a']}
+            href="/privacy-policy"
+            target="_blank"
+          >
             Privacy Policy
           </a>
           .

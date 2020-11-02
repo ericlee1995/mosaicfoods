@@ -1,0 +1,193 @@
+.head {
+	background-color: #fff;
+}
+
+.menu {
+	display: flex;
+	margin: auto;
+	max-width: 1280px;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	align-content: stretch;
+}
+
+.complete {
+	display: inline-flex;
+	padding: 30px 0 30px 40px;
+}
+
+.img {
+	display: block;
+	max-width: 80px;
+	max-height: 18px;
+}
+
+@media screen and (min-width: 768px) {
+	.img {
+		max-width: 134px;
+		max-height: 30px;
+	}
+}
+
+.subscription-flow {
+	flex: 2;
+	text-align: right;
+	margin-right: 40px;
+}
+
+@media screen and (max-width: 863px) {
+	.subscription-flow {
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 516px) {
+	.subscription-flow {
+		margin-right: 5px;
+	}
+}
+
+.subscription-flow ul {
+	height: 100%;
+	display: inline-flex;
+	align-content: center;
+	align-items: center;
+}
+
+.subscription-flow li {
+	position: relative;
+	display: inline-block;
+	padding: 38px 0;
+	margin-left: 72px;
+	opacity: 0.5;
+}
+
+@media screen and (max-width: 516px) {
+	.subscription-flow li {
+		margin-left: 30px;
+		padding: 0;
+		height: 20px;
+	}
+}
+
+.subscription-flow ul li a {
+	cursor: default;
+	font-family: CeraPRO-Medium, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: normal;
+	letter-spacing: 0.9px;
+	color: #0a6661;
+	position: relative;
+}
+
+.subscription-flow ul li a:after {
+	position: absolute;
+	top: -1px;
+	left: -30px;
+	font-size: 12px;
+	font-family: CeraPRO-Medium, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	width: 15px;
+	height: 16px;
+	padding-left: 1px;
+	background: #fff;
+	border: 2px solid #0a6661;
+	border-radius: 15px;
+	content: '';
+	box-sizing: content-box;
+}
+
+.subscription-flow ul li a:after {
+	content: '';
+	box-sizing: content-box;
+}
+
+@media screen and (max-width: 516px) {
+	.subscription-flow ul li a:after {
+		width: 16px;
+		height: 16px;
+		font-size: 12px;
+	}
+}
+.subscription-flow ul .li-complete > a:after {
+	background-image: url(//cdn.shopify.com/s/files/1/0080/0735/2399/t/13/assets/check-mark-white-48.png?v=1066794…);
+}
+
+.subscription-flow li:first-child > a:after {
+	content: '1';
+}
+
+.subscription-flow ul .li-complete > a:after {
+	background-color: #0a6661;
+	color: #fff;
+	content: '';
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 50%;
+}
+
+.subscription-flow li:nth-child(2) > a:after {
+	content: '2';
+}
+
+.subscription-flow li.current > a:after {
+	background-color: #0a6661;
+	color: #fff;
+}
+
+.subscription-flow li:nth-child(3) > a:after {
+	content: '3';
+}
+
+.subscription-flow li:nth-child(4) > a:after {
+	content: '4';
+}
+
+.subscription-flow ul .li-complete {
+	cursor: pointer;
+}
+
+.subscription-flow ul .li-complete a {
+	cursor: pointer;
+}
+
+@media screen and (max-width: 862px) {
+	.nav-text {
+		display: none;
+	}
+}
+
+.nav-text {
+	vertical-align: text-top;
+}
+
+.subscription-flow li.flow-nav-active {
+	opacity: 1;
+}
+
+.flow-nav-active:after {
+	opacity: 0.5;
+	width: calc(100% + 30px);
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	right: 0;
+	height: 4px;
+	border-top: 4px solid #0a6661;
+	left: -30px;
+	box-sizing: content-box;
+}
+
+@media screen and (max-width: 862px) {
+	.flow-nav-active:after {
+		display: none;
+	}
+}
