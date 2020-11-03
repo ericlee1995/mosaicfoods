@@ -33,6 +33,10 @@
   font-weight: bold;
 }
 
+.heading {
+  margin-bottom: 20px;
+}
+
 @media screen and (min-width: 992px) {
   .heading {
     font-size: 3.5em;
@@ -41,6 +45,8 @@
 }
 
 .subline {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 1em;
   font-family: CeraPRO-Medium;
 }
@@ -187,7 +193,7 @@
 .navbar {
   height: 75px;
   width: 100%;
-  justify-content: center;
+  justify-content: center !important;
 }
 
 .logo {

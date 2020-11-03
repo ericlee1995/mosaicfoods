@@ -27,6 +27,14 @@ a:hover {
 	text-decoration: underline;
 }
 
+body {
+	margin: 0;
+	font-size: 1em;
+	color: gray;
+	position: relative;
+	overflow-x: hidden;
+}
+
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
@@ -39,6 +47,15 @@ h3 {
 	color: #0a6661;
 	margin-top: 0;
 	line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Copernicus-Bold, serif;
 }
 
 article,
@@ -133,8 +150,18 @@ textarea {
 	border-radius: 0;
 }
 
-label {
+input[type='button'] {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/*label {
 	margin-left: 0.5em;
+}*/
+
+option {
+	background-color: #fff;
+	color: gray;
 }
 
 main.subscription-flow-main {

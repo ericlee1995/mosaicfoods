@@ -15,7 +15,7 @@
 	align-content: stretch;
 }
 
-.complete {
+.logo a {
 	display: inline-flex;
 	padding: 30px 0 30px 40px;
 }
@@ -116,7 +116,7 @@
 		font-size: 12px;
 	}
 }
-.subscription-flow ul .li-complete > a:after {
+.subscription-flow ul li.complete > a:after {
 	background-image: url(//cdn.shopify.com/s/files/1/0080/0735/2399/t/13/assets/check-mark-white-48.png?v=1066794…);
 }
 
@@ -124,7 +124,7 @@
 	content: '1';
 }
 
-.subscription-flow ul .li-complete > a:after {
+.subscription-flow ul li.complete > a:after {
 	background-color: #0a6661;
 	color: #fff;
 	content: '';
@@ -150,11 +150,11 @@
 	content: '4';
 }
 
-.subscription-flow ul .li-complete {
+.subscription-flow ul li.complete {
 	cursor: pointer;
 }
 
-.subscription-flow ul .li-complete a {
+.subscription-flow ul li.complete a {
 	cursor: pointer;
 }
 

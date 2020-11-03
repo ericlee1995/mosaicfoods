@@ -1,0 +1,203 @@
+.subscriptionFlow {
+	flex-direction: column;
+}
+
+.shopsection-plan-frequency {
+	flex: 1 1 auto;
+	display: flex;
+	overflow-x: hidden;
+}
+
+.shop-section:not(.shop-section-main-header) {
+	background-color: #f7f6f2;
+}
+
+.plan-frequency,
+.choose-frequency,
+.option-picker {
+	padding: 25px;
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative;
+	display: flex !important;
+	align-content: center;
+	justify-content: center;
+	width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+	.plan-frequency,
+	.option-picker {
+		padding: 50px;
+	}
+}
+
+.subscriptionFlow .flow-view {
+	display: none;
+}
+
+.subscriptionFlow .flow-view.flow-view-active {
+	display: block;
+}
+
+.choose-frequency-content {
+	min-height: 400px;
+	overflow: hidden;
+}
+
+.choose-frequency-subscription-content {
+	max-width: 600px;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	left: 0;
+	transition: left 0.5s, right 0.5s;
+}
+
+.choose-frequency-subscription-content h1 {
+	font-family: Copernicus-Bold, sans-serif;
+	font-size: 36px;
+	line-height: 36px;
+	color: #0a6661;
+	text-align: center;
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.plan-frequency-options {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-end;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.plan-frequency-option {
+	display: inline-block;
+	cursor: pointer;
+	background-color: #fff;
+	color: #bbb;
+	position: relative;
+	box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+	flex-basis: 30%;
+}
+
+.plan-frequency-option-content {
+	padding: 15px;
+	background-color: #f2f2f2;
+	min-height: 127px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.plan-frequency-option-every {
+	text-transform: uppercase;
+	font-family: CeraPRO-Medium, serif;
+}
+
+.plan-frequency-option-content h2 {
+	margin: 0;
+	font-size: 2.5em;
+	color: #bbb;
+}
+
+@media screen and (min-width: 992px) {
+	.plan-frequency-option-content h2 {
+		font-size: 3em;
+	}
+}
+
+.plan-frequency-option-weeks {
+	text-transform: uppercase;
+	font-family: CeraPRO-Medium, serif;
+}
+
+.plan-frequency-option-checkmark {
+	position: absolute;
+	bottom: -45px;
+	font-size: 1.7em;
+	width: 100%;
+	display: none;
+}
+
+.plan-frequency-options
+	.plan-frequency-option.plan-frequency-option-selected
+	.plan-frequency-option-header {
+	background-color: #0a6661;
+}
+
+.plan-frequency-option.plan-frequency-option-selected
+	.plan-frequency-option-content {
+	background-color: #fff;
+}
+
+.plan-frequency-option.plan-frequency-option-selected {
+	color: #0a6661;
+}
+
+.plan-frequency-option .plan-frequency-option-header {
+	background-color: #f5f4f0;
+	padding: 10px;
+	background-color: #bbb;
+	color: #fff;
+	font-family: CeraPRO-Medium, serif;
+	border-radius: 10px 10px 0 0;
+	font-size: 0.7em;
+	line-height: 1em;
+}
+
+.plan-frequency-option.plan-frequency-option-selected
+	.plan-frequency-option-content
+	h2 {
+	color: #0a6661;
+}
+
+.plan-frequency-option.plan-frequency-option-selected
+	.plan-frequency-option-checkmark {
+	display: block;
+}
+
+.plan-frequency-continue-button {
+	background-color: #0a6661;
+	color: #fff;
+	font-family: CeraPRO-Medium, serif;
+	padding: 20px;
+	border: 0;
+	border-radius: 6px;
+	margin: 0 auto;
+	display: block;
+	min-width: 150px;
+	margin-bottom: 45px;
+}
+
+.plan-frequency-notices {
+	display: flex;
+	text-align: center;
+	max-width: 900px;
+	width: 100%;
+	margin: 25px auto;
+}
+
+.plan-frequency-notice {
+	flex-basis: 33.33%;
+}
+
+.plan-frequency-notice:first-of-type {
+	padding-right: 10px;
+}
+
+.plan-frequency-notice-icon {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+
+.plan-frequency-notice .plan-frequency-notice-text {
+	font-size: 0.8em;
+}
